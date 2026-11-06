@@ -34,6 +34,10 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 import uvicorn
 
+QDRANT_URL = os.environ["QDRANT_URL"]
+QDRANT_API_KEY = os.environ.get("QDRANT_API_KEY")
+QWEN_MODEL = os.environ.get("QWEN_MODEL", "Qwen/Qwen2.5-3B-Instruct")
+
 try:
     ngrok.set_auth_token("NGROK_TOKEN")
 except Exception:
