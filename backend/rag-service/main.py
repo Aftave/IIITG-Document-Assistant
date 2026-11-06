@@ -35,17 +35,9 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import uvicorn
 
 try:
-    ngrok.set_auth_token("3L9LCNpulqJ5pyjXh593r59Or21_2BDu8erSG8evSdDzotres")
+    ngrok.set_auth_token("NGROK_TOKEN")
 except Exception:
     pass
-
-QWEN_MODEL = "Qwen/Qwen2.5-7B-Instruct"
-
-
-
-QDRANT_URL = "https://72bf86e8-5ac7-43d1-ad99-1f72780d851f.sa-east-1-0.aws.cloud.qdrant.io"
-QDRANT_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIiwic3ViamVjdCI6ImFwaS1rZXk6ZjRkZTdlZjMtY2YyOC00MjI4LTg5ODktYjg1YTUxNmQzODhkIn0.wED2B_5IHw3_ln9H-paD-kPDPH-dAU-NyWj8OCLZsgU"
-
 
 COLLECTION_NAME = "institute_docs"
 
