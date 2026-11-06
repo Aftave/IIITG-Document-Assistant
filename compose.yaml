@@ -1,0 +1,30 @@
+services:
+ mongo:
+  image: mongo:7
+  environment:
+   MONGO_INITDB_ROOT_USERNAME: ${MONGODB_USERNAME}
+   MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASSWORD}
+  ports: 
+   - "127.0.0.1:27017:27017"
+  volumes:
+   - mongo_data:/data/db
+ valkey:
+  image: valkey/valkey:8
+  command: ["valkey-server", "--appendonly", "yes"]
+  ports:
+   - "127.0.0.1:6379:6379"
+  volumes:
+   - valkey_data:/data
+ qdrant:
+  image: qdrant/qdrant:latest
+  ports:
+   - "127.0.0.1:6333:6333"
+  volumes:
+   - qdrant_data:/qdrant/storage
+
+
+
+volumes:
+ mongo_data:
+ valkey_data:
+ qdrant_data:
