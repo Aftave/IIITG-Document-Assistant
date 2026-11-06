@@ -2,16 +2,11 @@ fastapi
 uvicorn[standard]
 pydantic
 requests
-
 qdrant-client[fastembed]
-
 sentence-transformers
-
 transformers
 accelerate
 torch
 sentencepiece
-
 pypdf
 pymupdf
-fitz
